@@ -1,0 +1,20 @@
+:root {
+  --primary-color: #ffb92a;
+  --secondary-color: #1c1917;
+  --container-color: #1e293b;
+  --text-color: #ffffff;
+  --special-color: #a0a0a0;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background: linear-gradient(
+    var(--secondary-color) 50%,
+    var(--primary-color) 50%
+  );
+  min-height: 100vh;
+  position: relative;
+}
