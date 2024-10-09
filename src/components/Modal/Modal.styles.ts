@@ -18,3 +18,14 @@ export const ModalWrapper = styled.div`
     padding: 30px 2.5%;
   }
 `;
+export const LoaderContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+`;
+
+export const LoaderMessage = styled.p`
+  color: ${Colors.text};
+  font-size: 1.2rem;
+`;
