@@ -10,5 +10,11 @@ export const ModalWrapper = styled.div`
   transform: translate(-50%, -50%);
   border-radius: 8px;
   background-color: ${Colors.container};
-  padding: 50px min(2.5%, 20px);
+  padding: 50px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  @media screen and (max-width: 600px) {
+    padding: 30px 2.5%;
+  }
 `;

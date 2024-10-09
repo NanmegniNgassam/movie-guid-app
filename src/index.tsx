@@ -9,11 +9,15 @@ export const StyledTitle = styled.h1`
   color: ${Colors.text};
   font-size: 2.4rem;
   padding: 10px 20px;
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
 `;
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
+
 root.render(
   <React.StrictMode>
     <StyledTitle>Movie guid App </StyledTitle>

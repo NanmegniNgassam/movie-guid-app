@@ -18,7 +18,7 @@ export const SearchInput = styled.input`
   outline: none;
   border: 1px solid ${Colors.special};
   color: ${Colors.text};
-  padding: .7rem;
+  padding: .4rem .7rem;
   font-size: 1rem;
 `;
 export const SearchButton = styled.button`

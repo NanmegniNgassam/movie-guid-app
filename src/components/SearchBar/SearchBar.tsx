@@ -3,35 +3,28 @@ import { SearchButton, SearchInput, SearchWrapper } from "./SearchBar.styles";
 import { ISearchBarProps } from "./SearchBar.types";
 
 const SearchBar = (props: ISearchBarProps) => {
-  const [searchValue, setSearchValue] = useState("");
+  const [localSearchValue, setLocalSearchValue] = useState(props.searchValue);
   return (
     <SearchWrapper>
       <SearchInput
         type="text"
         id="search-value"
-        value={searchValue}
+        value={localSearchValue}
         placeholder="Enter a movie name"
         onChange={(value) => {
-          console.log("valeur mise à jour");
-          setSearchValue(value.target.value);
+          setLocalSearchValue(value.target.value);
         }}
         onKeyDown={(keyBoard) => {
-          // TODO: Initialisation de la requête au même titre qu'au click sur search
-          if (keyBoard.key === "Enter")
-            console.log(
-              "The request will be made with the value of : ",
-              searchValue
-            );
+          if (keyBoard.key === "Enter") {
+            props.setSearchValue(localSearchValue);
+          }
         }}
       />
       <SearchButton
         id="search-button"
-        onClick={() =>
-          console.log(
-            "The request will be made with the value of : ",
-            searchValue
-          )
-        }
+        onClick={() => {
+          props.setSearchValue(localSearchValue);
+        }}
       >
         Search
       </SearchButton>
