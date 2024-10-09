@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/movie-guid-app/static/css/main.67ae91d4.css",
+    "main.js": "/movie-guid-app/static/js/main.7f4c758d.js",
+    "index.html": "/movie-guid-app/index.html",
+    "main.67ae91d4.css.map": "/movie-guid-app/static/css/main.67ae91d4.css.map",
+    "main.7f4c758d.js.map": "/movie-guid-app/static/js/main.7f4c758d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.67ae91d4.css",
+    "static/js/main.7f4c758d.js"
+  ]
+}
