@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Loader } from "../../utils/style/Atoms";
 import MovieCard from "../MovieCard/MovieCard";
 import SearchBar from "../SearchBar/SearchBar";
-import { ModalWrapper } from "./Modal.styles";
+import { LoaderContainer, LoaderMessage, ModalWrapper } from "./Modal.styles";
 import { IModalProps } from "./Modal.types";
 import Info from "../Info/Info";
 import { DEFAULT_MOVIE_TITLE } from "../../utils/constants";
@@ -18,7 +18,7 @@ const Modal = (props: IModalProps) => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          `http://www.omdbapi.com/?apikey=18d007be&t=${searchValue}`
+          `https://www.omdbapi.com/?apikey=18d007be&t=${searchValue}`
         );
         const data = await response.json();
         if (data?.Response === "True") {
@@ -48,7 +48,12 @@ const Modal = (props: IModalProps) => {
   return (
     <ModalWrapper>
       <SearchBar searchValue={searchValue} setSearchValue={setSearchValue} />
-      {isDataLoading && <Loader />}
+      {isDataLoading && (
+        <LoaderContainer>
+          <Loader />
+          <LoaderMessage>Running search for '{searchValue}' ...</LoaderMessage>
+        </LoaderContainer>
+      )}
       {!isDataLoading && (
         <div>
           {movie?.title ? <MovieCard movie={movie as IMovie} /> : <Info></Info>}
