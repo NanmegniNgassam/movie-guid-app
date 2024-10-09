@@ -1,11 +1,14 @@
 import {
   CategoriesContainer,
+  Category,
   MainContent,
+  MetaContainer,
   MetaData,
   PosterImage,
-  StyledRating,
+  Rating,
   StyledStar,
   TextContent,
+  Title,
 } from "./MovieCard.styles";
 import { IMovieCardProps } from "./MovieCard.types";
 
@@ -15,18 +18,20 @@ const MovieCard = (props: IMovieCardProps) => {
       <MainContent>
         <PosterImage src={props.movie.bannerUrl} alt=""></PosterImage>
         <div style={{ display: "flex", flexDirection: "column", gap: "5px" }}>
-          <h2>{props.movie.title}</h2>
-          <StyledRating>
+          <Title>{props.movie.title}</Title>
+          <Rating>
             <StyledStar /> <p>{props.movie.imdbAverage}</p>
-          </StyledRating>
-          <MetaData>
-            <p>{props.movie.producerCompany}</p>
-            <p>{props.movie.releasedYear}</p>
-            <p>{props.movie.duration}</p>
-          </MetaData>
+          </Rating>
+          <MetaContainer>
+            <MetaData>{props.movie.producerCompany}</MetaData>
+            <MetaData>{props.movie.releasedYear}</MetaData>
+            <MetaData>{props.movie.duration}</MetaData>
+          </MetaContainer>
           <CategoriesContainer>
             {props.movie.categories.map((category, index) => {
-              return <span key={`${category}${index}`}>{category}</span>;
+              return (
+                <Category key={`${category}${index}`}>{category}</Category>
+              );
             })}
           </CategoriesContainer>
         </div>

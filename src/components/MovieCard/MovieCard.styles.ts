@@ -7,16 +7,8 @@ export const MainContent = styled.div`
   display: grid;
   grid-template-columns: 1fr 2fr;
   column-gap: 20px;
-  h2 {
-    color: ${Colors.text};
-    text-align: center;
-    font-size: 1.8rem;
-  }
   @media screen and (max-width: 600px) {
     grid-template-columns: 1fr;
-    h2 {
-      font-size: 1.4rem;
-    }
   }
 `;
 export const PosterImage = styled.img`
@@ -26,8 +18,16 @@ export const PosterImage = styled.img`
     margin: 0 auto;
   }
 `;
+export const Title = styled.h2`
+  color: ${Colors.text};
+  text-align: center;
+  font-size: 1.8rem;
+  @media screen and (max-width: 600px) {
+    font-size: 1.4rem;
+  }
+`;
 
-export const StyledRating = styled.div`
+export const Rating = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -44,27 +44,33 @@ export const StyledStar = styled(IoStarSharp)`
   font-size: 1.4rem;
 `;
 
-export const MetaData = styled.div`
+export const MetaContainer = styled.div`
   display: flex;
   justify-content: center;
   gap: 20px;
-  p {
-    font-size: 1rem;
-    color: ${Colors.special} ;
-  }
+`;
+export const MetaData = styled.p`
+  font-size: 1rem;
+  color: ${Colors.special} ;
 `;
 export const CategoriesContainer = styled.div`
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   align-items: start;
-  span {
-    display: block;
-    border: 2px solid ${Colors.special};
-    border-radius: 3px;
-    font-size: .7rem;
-    color: ${Colors.text};
-    padding: 5px 20px;
+`;
+
+export const Category = styled.span`
+  display: block;
+  border: 2px solid ${Colors.special};
+  border-radius: 3px;
+  font-size: .7rem;
+  color: ${Colors.text};
+  padding: 5px 20px;
+  cursor: pointer;
+  transition: background-color 1.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  &:hover{
+    background-color: ${Colors.special};
   }
 `;
 
