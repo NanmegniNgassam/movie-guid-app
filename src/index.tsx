@@ -43,10 +43,10 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
-    <Title>Movie guid App </Title>
+    <Title>Movie guid Soft</Title>
     <Modal />
     <Credentials>
-      @Copyright April 2023 | All rights reserved to
+      @Copyrights October 2024 | All rights reserved to
       <a
         href="https://gilles-ngassam.pisoftlite.com/"
         target="_blank"
