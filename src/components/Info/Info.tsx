@@ -5,7 +5,7 @@ interface IInfoProps{}
 const Info = (props: IInfoProps) => {
   return (
     <InfoWrapper>
-      <StyledIcon />
+      <StyledIcon data-testid="info-icon" />
       <span className="label">No movie matchs your search</span>
     </InfoWrapper>
   );
