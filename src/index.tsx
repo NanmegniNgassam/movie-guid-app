@@ -2,18 +2,11 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import Modal from "./components/Modal/Modal";
-import styled from "styled-components";
-import { Colors } from "./utils/style/Colors";
-import Credentials from "./components/Credentials";
 
-const Title = styled.h1`
-  color: ${Colors.text};
-  font-size: 2.4rem;
-  padding: 10px 20px;
-  @media screen and (max-width: 600px) {
-    display: none;
-  }
-`;
+import Credentials from "./components/Credentials";
+import Title from "./components/Title";
+
+
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -21,7 +14,7 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
-    <Title>Movie guid Soft</Title>
+    <Title title="Movie guid Soft"/>
     <Modal />
     <Credentials />
   </React.StrictMode>
