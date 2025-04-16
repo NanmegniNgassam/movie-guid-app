@@ -45,6 +45,7 @@ const Modal = (props: IModalProps) => {
     };
     fetchData();
   }, [searchValue]);
+  
   return (
     <ModalWrapper>
       <SearchBar searchValue={searchValue} setSearchValue={setSearchValue} />
