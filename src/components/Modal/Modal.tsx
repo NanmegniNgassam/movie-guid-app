@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Loader } from "../../utils/style/Atoms";
 import MovieCard from "../MovieCard/MovieCard";
-import SearchBar from "../SearchBar/SearchBar";
+import SearchBar from "../SearchBar";
 import { LoaderContainer, LoaderMessage, ModalWrapper } from "./Modal.styles";
 import { IModalProps } from "./Modal.types";
 import Info from "../Info/Info";
